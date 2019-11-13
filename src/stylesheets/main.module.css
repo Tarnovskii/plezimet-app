@@ -1,0 +1,67 @@
+.main {
+    overflow-y: hidden;
+}
+
+.panel {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://cdn.motor1.com/images/mgl/PjvO4/s1/steel-manufacturing.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.panelMainText {
+    padding: 0;
+    margin: 0;
+    font-size: xx-large;
+    color: black;
+    font-weight: bold;
+}
+
+.panelLowerText {
+    padding: 0;
+    margin-left: 200px;
+    font-size: x-large;
+    color: black;
+}
+
+.slideRight{
+
+    position: relative;
+    top: calc(50% - 5em);
+
+    animation-name: slideRight;
+    -webkit-animation-name: slideRight;
+
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+
+    visibility: visible !important;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-150%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@-webkit-keyframes slideRight {
+    0% {
+        -webkit-transform: translateX(-150%);
+    }
+    100% {
+        -webkit-transform: translateX(0%);
+    }
+}
