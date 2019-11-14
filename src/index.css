@@ -12,10 +12,10 @@ code {
     monospace;
 }
 
+/*
 html {
-  background: url('background.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-image: url("./background.png");
+  background-repeat: no-repeat;
   background-size: cover;
 }
+ */

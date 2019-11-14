@@ -8,10 +8,14 @@
     "@fortawesome/free-regular-svg-icons": "^5.11.2",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
+    "emailjs": "^2.2.0",
+    "emailjs-com": "^2.4.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "react-scroll-parallax": "^2.2.0",
+    "smoothscroll-for-websites": "^1.4.10"
   },
   "scripts": {
     "start": "react-scripts start",
