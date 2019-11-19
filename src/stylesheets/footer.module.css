@@ -1,0 +1,28 @@
+.footerBox {
+    color: white;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+    "logo adr"
+    "logo cnt"
+    ;
+    margin-top: 10px;
+    padding: 0;
+    background: rgb(40, 44, 45);
+    width: 100%;
+    height: 200px;
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.ard {
+    grid-area: adr;
+}
+
+.cnt {
+    grid-area: cnt;
+}
+

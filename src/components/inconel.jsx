@@ -1,9 +1,10 @@
 import React from 'react'
 
 export const Inconel = (props) => {
+
     return (
         <div>
-            inconel
+            фывфыв
         </div>
     )
 }

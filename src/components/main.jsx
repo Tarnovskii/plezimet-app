@@ -1,11 +1,29 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import s from '../stylesheets/main.module.css'
-import {Parallax} from "react-scroll-parallax";
+import {ParallaxBanner, ParallaxProvider} from "react-scroll-parallax";
+import ScrollAnimation from 'react-animate-on-scroll'
+import "animate.css/animate.min.css"
+import img from '../img/panel.png'
+import rplogo from '../img/icon.png'
+import track from '../img/track.png'
+import doc from '../img/doc.jpg'
+import diagram from '../img/Diagram.png'
 
 export const Main = () => {
     return (
-        <Fragment style={{overflowX: false}}>
-            <Parallax className={s.paralax} y={[50, -50]} tagOuter="figure">
+        <div className={s.main}>
+            <ParallaxProvider>
+                <ParallaxBanner
+                    className={s.paralax}
+                    expanded={false}
+                    style={{
+                        height: "100vh",
+                    }}
+                    layers={[{
+                        image: img,
+                        amount: 0.3,
+                        height: "100vh"
+                    }]}/>
                 <div className={s.panel}>
                     <div className={s.fadeIn}>
                         <em className={s.panelMainText}>
@@ -17,141 +35,53 @@ export const Main = () => {
                         </cite>
                     </div>
                 </div>
-            </Parallax>
-            <Parallax className={s.contentBox} y={[0, -12]} tagOuter="figure">
                 <div className={s.about}>
                     <b>PLEZIMET</b>
                     <p>
-                        For a long time, our company is one of the best suppliers of alloys.
-                        We supply the market with a large quantity of products, from high temperature alloys to
-                        deliveries
-                        of forged and laminated pieces of various seals.
-                        The main priorities of the company is the timely provision of quality products.
+                        Долгое время наша компания является одним из лучших поставщиков сплавов.
+                        Мы поставляем на рынок огромное количество продукции, от жаропрочных сплавов
+                        до поставок кованых и ламинированных деталей различных уплотнений.
+                        Основными приоритетами компании является своевременное предоставление качественной продукции.
+                        «Plezimet Group» - это уникальная компания, предоставляющая услуги в области металлургии в Европе и СНГ.
+                        Многолетний опыт работы в металлургическом секторе и
+                        уникальная философия компании позволяют нам занимать лидирующие позиции в европейском секторе.
                     </p>
                     <hr className={s.line}/>
                 </div>
-                <div className={s.princ}>
-                    <div className={s.txt}>
-                        <b>OUR PRINCIPLES</b>
-                    </div>
-                    <div className={s.planning}>
-                        <b>Planning</b>
-                        <p>IIdeas and individual plans for each client</p>
-                    </div>
-                    <div className={s.communication}>
-                        <b>Communication</b>
-                        <p>We keep in touch with the client at every moment of our work.</p>
-                    </div>
-                    <div className={s.results}>
-                        <b>Results</b>
-                        <p>We always work to the end and achieve the best results for our clients</p>
-                    </div>
-                    <div className={s.strategy}>
-                        <b>Strategy</b>
-                        <p>Strategies from professionals with years of experience</p>
+                <div className={s.block}>
+                    <b>Наши основные направления: </b>
+                    <img src={diagram} alt={"diagram"} style={{width: "60vw"}}/>
+                    <hr className={s.line}/>
+                </div>
+                <div className={s.block}>
+                    <div className={s.rp}>
+                        <div className={s.rplogo}>
+                            <img src={rplogo} alt={"rplogo"} style={{
+                                width: "300px"
+                            }}/>
+                            <br/>
+                            Начиная с ноября 2019 года мы рады сообщить что являемся официальными
+                            представителями завода ПАО «РУСПОЛИМЕТ»на территории Испании и Франции.
+                            Благодаря чему Plezimet Group является уверенным игроком на рынке
+                            продукцции авиационной и судостроительной отрасли.
+                        </div>
+                        <div className={s.dc}>
+                            {/* eslint-disable-next-line react/jsx-no-target-blank */}
+                            <a href={"/docs"} target="_blank">
+                                <img src={doc} alt={"rpdoc"}/>
+                            </a>
+                        </div>
                     </div>
                     <hr className={s.line}/>
                 </div>
-                <div className={s.about}>
-                    <b>PLEZIMET</b>
-                    <p>
-                        For a long time, our company is one of the best suppliers of alloys.
-                        We supply the market with a large quantity of products, from high temperature alloys to
-                        deliveries
-                        of forged and laminated pieces of various seals.
-                        The main priorities of the company is the timely provision of quality products.
-                    </p>
-                    <hr className={s.line}/>
+                <div className={s.track}>
+                    <ScrollAnimation animateIn='bounceInRight' animateOut='bounceOutLeft'
+                                     style={{animationDelay: "0.5s"}}>
+                        <img src={track} alt={"track"} style={{height: "280px", paddingTop: "10px"}}/>
+                    </ScrollAnimation>
                 </div>
-                <div className={s.princ}>
-                    <div className={s.txt}>
-                        <b>OUR PRINCIPLES</b>
-                    </div>
-                    <div className={s.planning}>
-                        <b>Planning</b>
-                        <p>IIdeas and individual plans for each client</p>
-                    </div>
-                    <div className={s.communication}>
-                        <b>Communication</b>
-                        <p>We keep in touch with the client at every moment of our work.</p>
-                    </div>
-                    <div className={s.results}>
-                        <b>Results</b>
-                        <p>We always work to the end and achieve the best results for our clients</p>
-                    </div>
-                    <div className={s.strategy}>
-                        <b>Strategy</b>
-                        <p>Strategies from professionals with years of experience</p>
-                    </div>
-                    <hr className={s.line}/>
-                </div>
-                <div className={s.about}>
-                    <b>PLEZIMET</b>
-                    <p>
-                        For a long time, our company is one of the best suppliers of alloys.
-                        We supply the market with a large quantity of products, from high temperature alloys to
-                        deliveries
-                        of forged and laminated pieces of various seals.
-                        The main priorities of the company is the timely provision of quality products.
-                    </p>
-                    <hr className={s.line}/>
-                </div>
-                <div className={s.princ}>
-                    <div className={s.txt}>
-                        <b>OUR PRINCIPLES</b>
-                    </div>
-                    <div className={s.planning}>
-                        <b>Planning</b>
-                        <p>IIdeas and individual plans for each client</p>
-                    </div>
-                    <div className={s.communication}>
-                        <b>Communication</b>
-                        <p>We keep in touch with the client at every moment of our work.</p>
-                    </div>
-                    <div className={s.results}>
-                        <b>Results</b>
-                        <p>We always work to the end and achieve the best results for our clients</p>
-                    </div>
-                    <div className={s.strategy}>
-                        <b>Strategy</b>
-                        <p>Strategies from professionals with years of experience</p>
-                    </div>
-                    <hr className={s.line}/>
-                </div>
-                <div className={s.about}>
-                    <b>PLEZIMET</b>
-                    <p>
-                        For a long time, our company is one of the best suppliers of alloys.
-                        We supply the market with a large quantity of products, from high temperature alloys to
-                        deliveries
-                        of forged and laminated pieces of various seals.
-                        The main priorities of the company is the timely provision of quality products.
-                    </p>
-                    <hr className={s.line}/>
-                </div>
-                <div className={s.princ}>
-                    <div className={s.txt}>
-                        <b>OUR PRINCIPLES</b>
-                    </div>
-                    <div className={s.planning}>
-                        <b>Planning</b>
-                        <p>IIdeas and individual plans for each client</p>
-                    </div>
-                    <div className={s.communication}>
-                        <b>Communication</b>
-                        <p>We keep in touch with the client at every moment of our work.</p>
-                    </div>
-                    <div className={s.results}>
-                        <b>Results</b>
-                        <p>We always work to the end and achieve the best results for our clients</p>
-                    </div>
-                    <div className={s.strategy}>
-                        <b>Strategy</b>
-                        <p>Strategies from professionals with years of experience</p>
-                    </div>
-                    <hr className={s.line}/>
-                </div>
-            </Parallax>
-        </Fragment>
+            </ParallaxProvider>
+        </div>
     )
 };
+

@@ -5,24 +5,32 @@ import {Inconel} from "../components/inconel";
 import {Warehouse} from "../components/warehouse";
 import {Contacts} from "../components/contacts";
 import {Main} from "../components/main";
+import {Doc} from "../components/docs";
+import {Page404} from "../components/404";
 
 export const ContentContainer = () => {
     return (
         <Switch>
-            <Route path="/supplies">
+            <Route exact path="/supplies">
                 <Supplies/>
             </Route>
-            <Route path="/inconel">
+            <Route exact path="/materials">
                 <Inconel/>
             </Route>
-            <Route path="/warehouse">
+            <Route exact path="/warehouse">
                <Warehouse/>
             </Route>
-            <Route path="/contacts">
+            <Route exact path="/contacts">
                 <Contacts/>
             </Route>
-            <Route path="/">
+            <Route exact path="/docs">
+                <Doc/>
+            </Route>
+            <Route exact path="/">
                 <Main/>
+            </Route>
+            <Route path = "/">
+                <Page404/>
             </Route>
         </Switch>
     )

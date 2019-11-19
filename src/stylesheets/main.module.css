@@ -1,63 +1,48 @@
 .main {
     overflow-x: hidden;
 }
-
+b {
+    color: #ed002f;
+}
 .paralax {
-    background-image: url("https://cdn.motor1.com/images/mgl/PjvO4/s1/steel-manufacturing.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    padding: 0;
-    margin: 0;
-    top: 0;
-    left: 0;
     box-shadow: 0 30px 40px 0 rgba(0,0,0,0.2), 0 12px 40px 0 rgba(0,0,0,0.19);
 }
-
 .panel {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
     text-align: center;
     height: 100vh;
     width: 100%;
 }
-
 .panelMainText {
     padding: 0;
     margin: 0;
     font-size: xx-large;
-    color: black;
+    color: white;
     font-weight: bold;
 }
-
 .panelLowerText {
     padding: 0;
     margin-left: 200px;
     font-size: x-large;
-    color: black;
+    color: white;
 }
-
 .about {
     display: inline-block;
-    width: 40vw;
+    width: 60vw;
     text-align: center;
-    padding: 50px;
+    padding-top: 15px;
+    padding-bottom: 10px;
 }
-
-b {
-    font-size: x-large;
-}
-
 .line {
-    border: none; /* Убираем границу для браузера Firefox */
-    color: #282c2d; /* Цвет линии для остальных браузеров */
-    background-color: #282c2d; /* Цвет линии для браузера Firefox и Opera */
-    height: 2px; /* Толщина линии */
+    border: none;
+    color: #282c2d;
+    background-color: #282c2d;
+    height: 2px;
 }
-
 .princ {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    width: 80vw;
     display: grid;
     grid-template-areas:
             "txt txt"
@@ -68,16 +53,22 @@ b {
     grid-template-columns: 50% 50%;
 
 }
-
+.block, .princ {
+    margin: 0;
+    padding: 0;
+    width: 60vw;
+    text-align: center;
+}
+.block {
+    display: inline-block;
+}
 .spicture {
     margin: 0;
     padding: 0;
 }
-
 .txt {
     grid-area: txt;
 }
-
 .planning {
     grid-area: pln;
 }
@@ -90,51 +81,14 @@ b {
 .results {
     grid-area: res;
 }
-
 .planning, .strategy, .communication, .results {
     text-align: center;
 }
-
 .contentBox {
     padding-top: 20px;
     padding-bottom: 20px;
     display: inline-block;
 }
-
-.slideRight {
-    padding-top: calc(50vh - 5em);
-    position: relative;
-
-    animation-name: slideRight;
-    -webkit-animation-name: slideRight;
-
-    animation-duration: 1.5s;
-    -webkit-animation-duration: 1.5s;
-
-    animation-timing-function: ease-in-out;
-    -webkit-animation-timing-function: ease-in-out;
-
-    visibility: visible !important;
-}
-
-@keyframes slideRight {
-    0% {
-        transform: translateX(-150%);
-    }
-    100% {
-        transform: translateX(0%);
-    }
-}
-
-@-webkit-keyframes slideRight {
-    0% {
-        -webkit-transform: translateX(-150%);
-    }
-    100% {
-        -webkit-transform: translateX(0%);
-    }
-}
-
 .fadeIn{
     padding-top: calc(50vh - 5em);
     position: relative;
@@ -150,39 +104,69 @@ b {
 
     visibility: visible !important;
 }
-
+.track {
+    background-image: url("../img/asphalt.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    text-align: center;
+}
+.rp {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas:
+            "rp dc"
+    ;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.dc {
+    grid-area: dc;
+}
+.rplogo {
+    grid-area: rp;
+}
+.rpdiscp {
+    grid-area: rpd;
+}
+.dc, .rplogo, .rpdiscp {
+    margin: 0;
+    padding: 0;
+}
+.dc img {
+    transition: all 0.5s;
+    width: 130px;
+    box-shadow: 0 30px 40px 0 rgba(0,0,0,0.2), 0 12px 40px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+}
+.dc img:hover {
+    width: 135px;
+}
 @keyframes fadeIn {
     0% {
         transform: scale(0);
         opacity: 0.0;
-    }
-    60% {
-        transform: scale(1.1);
-    }
-    80% {
-        transform: scale(0.9);
-        opacity: 1;
     }
     100% {
         transform: scale(1);
         opacity: 1;
     }
 }
-
 @-webkit-keyframes fadeIn {
     0% {
         -webkit-transform: scale(0);
         opacity: 0.0;
-    }
-    60% {
-        -webkit-transform: scale(1.1);
-    }
-    80% {
-        -webkit-transform: scale(0.9);
-        opacity: 1;
     }
     100% {
         -webkit-transform: scale(1);
         opacity: 1;
     }
 }
+b {
+    font-size: x-large;
+}
+
