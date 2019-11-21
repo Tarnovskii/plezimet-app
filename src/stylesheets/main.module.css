@@ -3,6 +3,7 @@
 }
 b {
     color: #ed002f;
+    font-size: xx-large;
 }
 .paralax {
     box-shadow: 0 30px 40px 0 rgba(0,0,0,0.2), 0 12px 40px 0 rgba(0,0,0,0.19);
@@ -17,30 +18,32 @@ b {
     width: 100%;
 }
 .panelMainText {
-    padding: 0;
-    margin: 0;
     font-size: xx-large;
     color: white;
     font-weight: bold;
 }
 .panelLowerText {
-    padding: 0;
     margin-left: 200px;
     font-size: x-large;
     color: white;
 }
 .about {
+    margin-top: 60px;
     display: inline-block;
     width: 60vw;
     text-align: center;
-    padding-top: 15px;
-    padding-bottom: 10px;
 }
 .line {
     border: none;
-    color: #282c2d;
-    background-color: #282c2d;
-    height: 2px;
+    color: #bec5c6;
+    background-color: #bec5c6;
+    height: 1px;
+}
+.colums .line {
+    margin-bottom: 0;
+    margin-top: 0;
+    display: inline-block;
+    width: 75%;
 }
 .princ {
     display: grid;
@@ -54,17 +57,14 @@ b {
 
 }
 .block, .princ {
-    margin: 0;
-    padding: 0;
     width: 60vw;
     text-align: center;
 }
 .block {
+    margin-top: 60px;
     display: inline-block;
 }
 .spicture {
-    margin: 0;
-    padding: 0;
 }
 .txt {
     grid-area: txt;
@@ -85,8 +85,6 @@ b {
     text-align: center;
 }
 .contentBox {
-    padding-top: 20px;
-    padding-bottom: 20px;
     display: inline-block;
 }
 .fadeIn{
@@ -105,12 +103,8 @@ b {
     visibility: visible !important;
 }
 .track {
-    background-image: url("../img/asphalt.jpg");
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+    margin-top: 60px;
     height: 300px;
-    margin: 0;
-    padding: 0;
     width: 100vw;
     text-align: center;
 }
@@ -120,22 +114,38 @@ b {
     grid-template-areas:
             "rp dc"
     ;
-    padding: 0;
-    margin: 0;
     text-align: center;
+}
+.rplogo {
+    padding-top: 7.5%;
+    grid-area: rp;
 }
 .dc {
     grid-area: dc;
 }
-.rplogo {
-    grid-area: rp;
-}
 .rpdiscp {
     grid-area: rpd;
 }
-.dc, .rplogo, .rpdiscp {
-    margin: 0;
-    padding: 0;
+.colums {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+            "luTop stTop"
+            "lu st";
+}
+.luTop {
+    grid-area: luTop;
+}
+.stTop {
+    grid-area: stTop;
+}
+.lu {
+    text-align: left;
+    grid-area: lu;
+}
+.st {
+    grid-area: st;
 }
 .dc img {
     transition: all 0.5s;
@@ -165,8 +175,5 @@ b {
         -webkit-transform: scale(1);
         opacity: 1;
     }
-}
-b {
-    font-size: x-large;
 }
 

@@ -13,6 +13,7 @@
     "bootstrap": "^4.3.1",
     "emailjs": "^2.2.0",
     "emailjs-com": "^2.4.1",
+    "google-maps-react": "^2.0.2",
     "jquery": "^3.4.1",
     "react": "^16.11.0",
     "react-animate-on-scroll": "^2.1.5",
@@ -43,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "google-map-react": "^1.1.5"
   }
 }

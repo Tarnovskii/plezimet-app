@@ -10,10 +10,6 @@ export const Header = (props) => {
                 <NavLink to="/"> <img className={s.logo} src={logo} alt="logo"/> </NavLink>
             </div>
 
-            <div className={s.sb} onMouseEnter={() => props.dropDownHandler("mouseOut")}>
-                <NavLink className={s.link} to="/supplies"> Supplies </NavLink>
-            </div>
-
             <div className={s.ib}>
                 <NavLink className={s.link}
                          to="/materials"
@@ -23,7 +19,7 @@ export const Header = (props) => {
             </div>
 
             <div className={s.wb} onMouseEnter={() => props.dropDownHandler("mouseOut")}>
-                <NavLink className={s.link} to="/warehouse"> Warehouse </NavLink>
+                <a className={s.link} href="/#chapter4">About us</a>
             </div>
 
             <div className={s.cb} onMouseEnter={() => props.dropDownHandler("mouseOut")}>
