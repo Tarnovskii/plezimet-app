@@ -42,3 +42,7 @@ label {
     height: 35px;
     width: 50%
 }
+
+input:invalid {
+    box-shadow: 0 0 5px 1px red;
+}

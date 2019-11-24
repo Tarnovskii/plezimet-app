@@ -1,10 +1,10 @@
 import React from 'react'
 import {Route, Switch} from "react-router-dom";
 import {Inconel} from "../components/inconel";
-import {Contacts} from "../components/contacts";
 import {Main} from "../components/main";
 import {Doc} from "../components/docs";
 import {Page404} from "../components/404";
+import {ContactsContainer} from "./contacts-container";
 
 export const ContentContainer = () => {
     return (
@@ -13,7 +13,7 @@ export const ContentContainer = () => {
                 <Inconel/>
             </Route>
             <Route exact path="/contacts">
-                <Contacts/>
+                <ContactsContainer/>
             </Route>
             <Route exact path="/docs">
                 <Doc/>
@@ -26,4 +26,4 @@ export const ContentContainer = () => {
             </Route>
         </Switch>
     )
-}
+};
