@@ -1,4 +1,7 @@
 .main {
+    left: 0;
+    right: 0;
+    padding: 0;
     overflow-x: hidden;
 }
 b {
@@ -146,6 +149,35 @@ b {
 }
 .st {
     grid-area: st;
+}
+.link {
+    display: inline-block;
+    border: none;
+    text-align: center;
+    margin: 5px;
+    font-weight: 700;
+    font-size: x-large;
+    transition-duration: 0.1s;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.linkWrapper {
+    width: 150px;
+    border-radius: 7px;
+    background-color: #ed002f;
+}
+.linkField {
+    position: absolute;
+    left: calc(50% - 4.5em);
+    display: inline-block;
+    bottom: 30px;
+}
+.linkField .fadeIn {
+    padding-top: 0;
+}
+.link:active {
+    color: white;
 }
 .dc img {
     transition: all 0.5s;

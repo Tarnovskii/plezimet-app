@@ -1,5 +1,11 @@
-.label {
-    margin-top: 60px;
+.main {
+    overflow-x: hidden;
+}
+.formWrapper {
+    box-shadow: 0 -10px 16px 0 rgba(0,0,0,0.24), 0 -3px 50px 0 rgba(0,0,0,0.19);
+    min-width: 800px;
+    width: 80%;
+    display: inline-block;
 }
 .line {
     border: none;
@@ -7,42 +13,95 @@
     background-color: #bec5c6;
     height: 1px;
 }
-
+.pageName {
+    padding-top: 30px;
+}
+.form {
+    text-align: left;
+    display: grid;
+    grid-template-areas:
+            "user_name user_company"
+            "user_email user_phone"
+            "cmt cmt"
+            "btn btn";
+    grid-template-rows: 60px 60px 150px 60px;
+    grid-template-columns: 50% 50%;
+}
+.name {
+    grid-area: user_name;
+}
+.company {
+    grid-area: user_company;
+}
+.email {
+    grid-area: user_email;
+}
+.phone {
+    grid-area: user_phone;
+}
+.comment {
+    grid-area: cmt;
+}
+.btn {
+    text-align: right;
+    grid-area: btn;
+}
+.btn, .name, .company, .email, .phone, .comment {
+    padding: 10px;
+    margin: 10px;
+}
+.button {
+    display: inline-block;
+    font-weight: 900;
+    font-size: large;
+    cursor: pointer;
+    background: none;
+    color: #ed002f;
+    text-align: center;
+    height: 35px;
+    border: none;
+}
+.inputField {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgb(40,44,45);
+    height: 25px;
+    width: 100%
+}
+.commentField {
+    resize: none;
+    width: 100%;
+    height: 120px;
+}
+.mapWrapper {
+    color: #ed002f;
+    text-align: right;
+    display: inline-block;
+    box-shadow: 0 -10px 16px 0 rgba(0,0,0,0.24), 0 -3px 50px 0 rgba(0,0,0,0.19);
+    min-width: 800px;
+    width: 80%;
+    margin: 30px 0;
+    padding: 0;
+}
+.data {
+    display: inline-block;
+    min-width: 300px;
+    width: 50%
+}
+.button:active {
+    outline: none;
+}
+.inputField:focus {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid black;
+    outline: none;
+}
 label {
     padding-top: 10px;
 }
-
-.form {
-    padding: 5px;
-    margin: 5px;
-    display: inline-block;
-    width: 60%;
-    background-color: rgba(40, 44, 45, 0.2);
-    border: rgba(40, 44, 45, 0.5) 2px solid;
-    border-radius: 5px;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-.inputField {
-    text-align: center;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    height: 25px;
-    width: 40%
-}
-
-.button {
-    background-color: rgba(40, 44, 45, 0.7);
-    color: white;
-    text-align: center;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    height: 35px;
-    width: 50%
-}
-
 input:invalid {
-    box-shadow: 0 0 5px 1px red;
+    border-bottom: 1px solid #ed002f;
 }

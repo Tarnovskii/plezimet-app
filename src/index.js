@@ -3,21 +3,32 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import {BrowserRouter} from "react-router-dom";
-
 import SmoothScroll from 'smoothscroll-for-websites'
+import {BrowserRouter} from "react-router-dom";
 
 SmoothScroll({
     stepSize: 100,
     animationTime: 1000
 });
+let setDefaultLanguage = () => {
+    if (localStorage.language === undefined)
+        localStorage.language = "en"
+};
 
+let createStateForHeader = () => {
+    if (window.location.pathname === `/${localStorage.language}/materials`) {
+        return "static"
+    } else return "dynamic"
+};
+
+setDefaultLanguage();
 
 ReactDOM.render(
     <BrowserRouter>
-            <App/>
+        <App headerMode={createStateForHeader()}/>
     </BrowserRouter>,
-    document.getElementById('root'));
+    document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
