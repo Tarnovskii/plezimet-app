@@ -12,11 +12,7 @@ import {Redirect, Route, Switch} from "react-router";
 class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            headerMode: props.headerMode
-        };
         this.setLanguage.bind(this);
-        this.setHeaderVisibleMode.bind(this);
     }
 
     setLanguage = (language) => {
@@ -37,7 +33,7 @@ class App extends React.Component {
     render() {
         return (
             <div className={s.App}>
-                <HeaderContainer displayMode={this.state.headerMode} setLanguage={this.setLanguage}/>
+                <HeaderContainer setLanguage={this.setLanguage}/>
                 <Switch>
                     <Route exact path={`/${localStorage.language}/contacts`}>
                         <ContactsContainer setHeaderMode={this.setHeaderVisibleMode}/>
@@ -48,6 +44,7 @@ class App extends React.Component {
                     </Route>
                     <Route exact path={`/${localStorage.language}/materials`}>
                         <MaterialsContainer setHeaderMode={this.setHeaderVisibleMode}/>
+                        <Footer setLanguage={this.setLanguage}/>
                     </Route>
                     <Route exact path={`/${localStorage.language}`}>
                         <MainContainer setHeaderMode={this.setHeaderVisibleMode}/>

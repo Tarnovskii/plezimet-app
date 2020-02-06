@@ -15,17 +15,11 @@ let setDefaultLanguage = () => {
         localStorage.language = "en"
 };
 
-let createStateForHeader = () => {
-    if (window.location.pathname === `/${localStorage.language}/materials`) {
-        return "static"
-    } else return "dynamic"
-};
-
 setDefaultLanguage();
 
 ReactDOM.render(
     <BrowserRouter>
-        <App headerMode={createStateForHeader()}/>
+        <App/>
     </BrowserRouter>,
     document.getElementById('root')
 );

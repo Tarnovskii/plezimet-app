@@ -1,7 +1,7 @@
 import React from 'react'
 import s from '../stylesheets/header.module.css'
 import logo from '../img/logo.png'
-import {local} from "../state/localization";
+import {local} from "../store/localization";
 
 
 export const Header = (props) => {

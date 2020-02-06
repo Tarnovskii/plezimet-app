@@ -2,7 +2,7 @@ import React from 'react'
 import s from '../stylesheets/main.module.css'
 import {ParallaxBanner, ParallaxProvider} from "react-scroll-parallax";
 import ScrollAnimation from 'react-animate-on-scroll'
-import {local} from '../state/localization'
+import {local} from '../store/localization'
 import "animate.css/animate.min.css"
 import doc from '../img/doc.jpg'
 import build from '../img/build.jpg'

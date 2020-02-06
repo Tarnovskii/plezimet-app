@@ -4,7 +4,7 @@ import s from '../stylesheets/contacts.module.css'
 import cntPanel from '../img/world_panel.jpg'
 import Map from 'pigeon-maps'
 import Marker from 'pigeon-marker/react'
-import {local} from "../state/localization";
+import {local} from "../store/localization";
 
 
 export const Contacts = (props) => {

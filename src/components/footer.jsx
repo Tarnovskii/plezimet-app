@@ -1,7 +1,7 @@
 import React from 'react'
 import s from '../stylesheets/footer.module.css'
 import {NavLink} from "react-router-dom";
-import {local} from '../state/localization'
+import {local} from '../store/localization'
 
 export const Footer = (props) => {
     return (
@@ -21,7 +21,7 @@ export const Footer = (props) => {
                 </button>
                 <br/>
                 <button onClick={() => props.setLanguage("eng")}><img
-                    src={"http://www.200stran.ru/images/country/1242421831_5ee831.gif"} alt={"eng"}/> English
+                    src={"http://www.200stran.ru/images/country/1242421831_5ee831.gif"} alt={"en"}/> English
                 </button>
                 <br/>
                 <button onClick={() => props.setLanguage("es")}><img
