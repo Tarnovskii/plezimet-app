@@ -1,3 +1,5 @@
+/* Created by Artem Tarnovskii {DATE: 01/10/2020} for © Plezimet Group Metallurgical Services */
+
 import React from 'react';
 import s from './stylesheets/App.module.css';
 import {MainContainer} from "./containers/main-container";

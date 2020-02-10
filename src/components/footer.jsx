@@ -30,7 +30,7 @@ export const Footer = (props) => {
             </div>
             <div className={s.adr}>
                 <img src="https://img.icons8.com/color/36/000000/worldwide-location.png" alt={'pos'}/>
-                <p>Pg/Industrial Sangroniz, 2-Mod24, 48150 Sondika, Vizcaya, Spain</p>
+                <p>Colón de Larreátegui, 26, 4A, 48001 Bilbao, Spain</p>
             </div>
             <div className={s.phone}>
                 <img src="https://img.icons8.com/color/36/000000/ringing-phone.png" alt={'phone'}/>
@@ -50,4 +50,4 @@ export const Footer = (props) => {
             </div>
         </div>
     )
-}
+};

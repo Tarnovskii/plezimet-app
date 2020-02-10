@@ -18,16 +18,24 @@ export class MaterialsContainer extends React.Component {
         this.setNewTypesArray.bind(this);
     }
 
+
     setNewTypesArray = (newArray) => {
         this.setState({
             typesArray: newArray
         });
-        console.log(this.state.typesArray)
     };
     setNewFormFactorsArray = (newArray) => {
         this.setState({
             formFactorsArray: newArray
         })
+    };
+
+    generateCompositionArrayFromObject = (composition) => {
+        let compositionsArray = [];
+
+        for (let element in composition) compositionsArray.push({[element]: composition[element]});
+
+        return compositionsArray;
     };
 
     generateMaterialsList = () => {
@@ -47,8 +55,20 @@ export class MaterialsContainer extends React.Component {
                                     <p> Вид готового материала: </p>
                                     {elem.formFactor.map((form) => (<p> {form} </p>))}
                                 </div>
-                                <div className={s.materalComposition}>
-                                    <p> {"Состав"}</p>
+                                <div className={s.materialComposition}>
+                                    <p>Состав(%): </p>
+                                    <table className={s.compositionTable}>
+                                        <tr style={{fontWeight: "bold", background: "#F7F7F7"}}>
+                                            {this.generateCompositionArrayFromObject(elem.compositions).map((composition) => (
+                                                <td>{Object.keys(composition).toString()}</td>
+                                            ))}
+                                        </tr>
+                                        <tr>
+                                            {this.generateCompositionArrayFromObject(elem.compositions).map((composition) => (
+                                                <td>{composition[Object.keys(composition).toString()]}</td>
+                                            ))}
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -65,8 +85,20 @@ export class MaterialsContainer extends React.Component {
                                     <p> Вид готового материала: </p>
                                     {elem.formFactor.map((form) => (<p> {form} </p>))}
                                 </div>
-                                <div className={s.materalComposition}>
-                                    <p> {"Состав"}</p>
+                                <div className={s.materialComposition}>
+                                    <p>Состав(%): </p>
+                                    <table className={s.compositionTable}>
+                                        <tr style={{fontWeight: "bold", background: "#F7F7F7"}}>
+                                            {this.generateCompositionArrayFromObject(elem.compositions).map((composition) => (
+                                                <td>{Object.keys(composition).toString()}</td>
+                                            ))}
+                                        </tr>
+                                        <tr>
+                                            {this.generateCompositionArrayFromObject(elem.compositions).map((composition) => (
+                                                <td>{composition[Object.keys(composition).toString()]}</td>
+                                            ))}
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -75,11 +107,12 @@ export class MaterialsContainer extends React.Component {
             }
         });
         return somethingWasFounded ? mappedMaterialsArray : (
-            <div>
-                <p> Sorry, but no results were found for your search. </p>
+            <div style={{height: "100%", fontSize: "30px", fontWeight: "bold", marginTop: "50px"}}>
+                <p> Sorry, but no results found for your search. </p>
             </div>
         )
     };
+
     setSearchValueInFieldAndSearch = (newValue) => {
         this.setState({
             searchValue: newValue,
@@ -91,15 +124,13 @@ export class MaterialsContainer extends React.Component {
 
     render() {
         return (
-            <div>
-                <Materials
-                    setNewTypesArray={this.setNewTypesArray}
-                    setNewFormFactorsArray={this.setNewFormFactorsArray}
-                    setSearchValueInFieldAndSearch={this.setSearchValueInFieldAndSearch}
-                    getSearchValue={this.getSearchValue}
-                    generateMaterialsList={this.generateMaterialsList}
-                />
-            </div>
+            <Materials
+                setNewTypesArray={this.setNewTypesArray}
+                setNewFormFactorsArray={this.setNewFormFactorsArray}
+                setSearchValueInFieldAndSearch={this.setSearchValueInFieldAndSearch}
+                getSearchValue={this.getSearchValue}
+                generateMaterialsList={this.generateMaterialsList}
+            />
         )
     }
 

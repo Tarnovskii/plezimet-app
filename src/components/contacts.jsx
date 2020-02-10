@@ -2,8 +2,6 @@ import React from 'react'
 import {ParallaxBanner, ParallaxProvider} from "react-scroll-parallax";
 import s from '../stylesheets/contacts.module.css'
 import cntPanel from '../img/world_panel.jpg'
-import Map from 'pigeon-maps'
-import Marker from 'pigeon-marker/react'
 import {local} from "../store/localization";
 
 
@@ -85,31 +83,12 @@ export const Contacts = (props) => {
                         </div>
                     </form>
                 </div>
-                <div className={s.mapWrapper}>
-                    <Map
-                        center={[43.2979596, -2.9385935]}
-                        zoom={12}
-                        height={400}
-                    >
-                        <Marker
-                            anchor={[43.2979596, -2.9385935]}
-                            payload={1}
-                            onClick={({event, anchor, payload}) => {
-                                window.open('https://goo.gl/maps/nSXHkykqG4REaKg86');
-                                return 20;
-                            }}
-                        />
-                        <p style={{
-                            padding: 0,
-                            margin: 0,
-                        }}>
-                            {local[localStorage.language].map_discp}</p>
-                    </Map>
-                </div>
+                {/* eslint-disable-next-line jsx-a11y/iframe-has-title */}
+                <iframe className={s.mapWrapper} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2905.4164415061523!2d-2.9343114842314657!3d43.26365068555026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4e4fda04baa4ed%3A0xe789717e876fcba8!2zQ29sw7NuIGRlIExhcnJlw6F0ZWd1aSBLYWxlYSwgMjYsIDQ4MDA5IEJpbGJvLCBCaXprYWlhLCDQmNGB0L_QsNC90LjRjw!5e0!3m2!1sru!2sua!4v1581345188010!5m2!1sru!2sua"/>
                 <div className={s.data}>
                     <b>{local[localStorage.language].we_are_here}</b>
                     <hr className={s.line} style={{width: "120px"}}/>
-                    <p>Pg/Industrial Sangroniz, 2-Mod24, 48150 Sondika, Vizcaya, Spain</p>
+                    <p>Colón de Larreátegui, 26, 4A, 48001 Bilbao, Spain</p>
                     <p>Tel: +34 944 530 809</p>
                     <p>E-Mail: info@plezimet.com | plezimet2019@gmail.com</p>
                 </div>
