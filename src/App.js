@@ -18,12 +18,13 @@ class App extends React.Component {
     }
 
     setLanguage = (language) => {
+        let currentLocation = window.location.pathname.slice(4);
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         });
         localStorage.language = language;
-        this.forceUpdate();
+        window.location.pathname = `${language}/${currentLocation}`;
     };
 
     setHeaderVisibleMode = (mode) => {
@@ -37,7 +38,7 @@ class App extends React.Component {
             <div className={s.App}>
                 <HeaderContainer setLanguage={this.setLanguage}/>
                 <Switch>
-                    <Route exact path={`/${localStorage.language}/contacts`}>
+                    <Route path={`/${localStorage.language}/contacts`}>
                         <ContactsContainer setHeaderMode={this.setHeaderVisibleMode}/>
                         <Footer setLanguage={this.setLanguage}/>
                     </Route>

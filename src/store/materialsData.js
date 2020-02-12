@@ -3,7 +3,7 @@ export const materialsData = [
         type: "inconel",
         fullName: "Inconel 718 | UNS N07718 | 2.4668",
         formFactor:
-            [],
+            ['scrap', 'shavings'],
         compositions:
             {
                 C: 0.08,
@@ -26,7 +26,7 @@ export const materialsData = [
         type: "inconel",
         fullName: "Inconel 713	| UNS N07713 | AMS 5377",
         formFactor:
-            [],
+            ['scrap', 'shavings'],
         compositions:
             {
                 C: "0.08 - 0.20",
@@ -45,7 +45,7 @@ export const materialsData = [
         type: "inconel",
         fullName: "Inconel 625 | UNS N06625 | 2.4856",
         formFactor:
-            [],
+            ['scrap', 'shavings'],
         compositions:
             {
                 C: 0.10,
@@ -69,7 +69,7 @@ export const materialsData = [
         type: "aisi",
         fullName: "AISI M2 | HS6-5-2C | 1.3343",
         formFactor:
-            [],
+            ['hardened_ingot'],
         compositions:
             {
                 C: "0.86 - 0.94",
@@ -86,7 +86,7 @@ export const materialsData = [
         type: "aisi",
         fullName: "AISI 304 | UNS S30400 | X5CrNi18-10 | 1.4301",
         formFactor:
-            [],
+            ["scrap", "hardened_ingot", "ingot"],
         compositions:
             {
                 C: 0.07,
@@ -103,7 +103,7 @@ export const materialsData = [
         type: "aisi",
         fullName: "AISI 316 | UNS S31603 | X5CrNiMo17-12-2 | 1.4401",
         formFactor:
-            [],
+            ["scrap", "hardened_ingot", "ingot"],
         compositions:
             {
                 C: 0.07,
@@ -120,7 +120,7 @@ export const materialsData = [
         type: "aisi",
         fullName: "AISI 321 | UNS S32100 | X6CrNiTi18-10 | 1.4541",
         formFactor:
-            [],
+            ["scrap", "hardened_ingot", "ingot"],
         compositions:
             {
                 C: 0.08,
@@ -137,10 +137,10 @@ export const materialsData = [
             },
     },
     {
-        type: "nickel-based",
+        type: "other",
         fullName: "Alloy Tipe 718 | CrNiMo10-20-1",
         formFactor:
-            [],
+            ["ingot"],
         compositions:
             {
                 C: 0.20,
@@ -165,7 +165,7 @@ export const materialsData = [
         type: "titan",
         fullName: "Titanium Gr. 5 | UNS R56400 | Ti6Al4V | 3.7165",
         formFactor:
-            [],
+            ["scrap", "shavings"],
         compositions:
             {
                 N: 0.05,

@@ -1,99 +1,115 @@
 .main {
     overflow-x: hidden;
 }
+
 .formWrapper {
-    box-shadow: 0 -10px 16px 0 rgba(0,0,0,0.24), 0 -3px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 -10px 16px 0 rgba(0, 0, 0, 0.24), 0 -3px 50px 0 rgba(0, 0, 0, 0.19);
     min-width: 800px;
     width: 80%;
     display: inline-block;
 }
+
 .line {
     border: none;
     color: #bec5c6;
     background-color: #bec5c6;
     height: 1px;
 }
+
 .pageName {
     padding-top: 30px;
 }
+
 .form {
     text-align: left;
     display: grid;
-    grid-template-areas:
-            "user_name user_company"
-            "user_email user_phone"
-            "cmt cmt"
-            "btn btn";
+    grid-template-areas: "user_name user_company" "user_email user_phone" "cmt cmt" "btn btn";
     grid-template-rows: 60px 60px 150px 60px;
     grid-template-columns: 50% 50%;
 }
+
 .name {
     grid-area: user_name;
 }
+
 .company {
     grid-area: user_company;
 }
+
 .email {
     grid-area: user_email;
 }
+
 .phone {
     grid-area: user_phone;
 }
+
 .comment {
     grid-area: cmt;
 }
+
 .btn {
     text-align: right;
     grid-area: btn;
 }
+
 .btn, .name, .company, .email, .phone, .comment {
     padding: 10px;
     margin: 10px;
 }
+
 .button {
-    display: inline-block;
-    font-weight: 900;
-    font-size: large;
-    cursor: pointer;
-    background: none;
-    color: #ed002f;
-    text-align: center;
-    height: 35px;
-    border: none;
+    transition: 0.2s all;
+    color: black;
+    background-color: #F7F7F7;
+    width: 100px;
+    border: 1px solid #D9D9D9;
 }
+
+.button:hover {
+    color: white;
+    background-color: #46B1FB;
+    cursor: pointer;
+}
+
 .inputField {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid rgb(40,44,45);
+    border-bottom: 1px solid rgb(40, 44, 45);
     height: 25px;
     width: 100%
 }
+
 .commentField {
     resize: none;
     width: 100%;
     height: 120px;
 }
+
 .mapWrapper {
     border: 0;
-    color: #ed002f;
+    color: var(--label-color);
     text-align: right;
     display: inline-block;
-    box-shadow: 0 -10px 16px 0 rgba(0,0,0,0.24), 0 -3px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 -10px 16px 0 rgba(0, 0, 0, 0.24), 0 -3px 50px 0 rgba(0, 0, 0, 0.19);
     min-width: 800px;
     width: 80%;
     height: 550px;
     margin: 30px 0;
     padding: 0;
 }
+
 .data {
     display: inline-block;
     min-width: 300px;
     width: 50%
 }
+
 .button:active {
     outline: none;
 }
+
 .inputField:focus {
     border-top: none;
     border-left: none;
@@ -101,9 +117,11 @@
     border-bottom: 2px solid black;
     outline: none;
 }
+
 label {
     padding-top: 10px;
 }
+
 input:invalid {
-    border-bottom: 1px solid #ed002f;
+    border-bottom: 1px solid var(--label-color);
 }

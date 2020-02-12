@@ -1,150 +1,250 @@
-.cap {
-    transition-duration: 0.5s;
-    color: white;
-    text-decoration: none;
-    display: grid;
-    grid-template-columns: 50px 200px auto 150px 150px 200px 100px 50px;
-    grid-template-areas: ". logo . ib cb au lng .";
-    position: fixed;
-    left: 0;
-    top: 0;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    z-index: 99999;
-}
-.cap:hover {
-    transition-duration: 0.5s;
-    height: 75px !important;
-}
-.sb {
-    grid-area: sb;
-}
-.ib {
-    grid-area: ib;
-}
-.wb {
-    grid-area: wb;
-}
-.cb {
-    grid-area: cb;
-}
-.au {
-    grid-area: au;
-}
-.lng {
-    grid-area: lng;
-}
-.sb, .ib, .wb, .cb, .lngб, .au {
-    text-decoration: none;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    font-size: large;
-    font-weight: bold;
-}
-.logo {
-    transition-duration: 0.1s;
-    padding: 0;
-    position: absolute;
-    height: 100%;
-    top: 0;
-    left: 0;
-    grid-area: logo;
-}
-.logo:hover {
-    transition-duration: 0.1s;
-    height: 105%;
-}
-.mt {
-    text-align: center;
-    transition-duration: 0.5s;
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    width: 150px;
-}
-.inc, .aisi, .titan {
+@media screen and (min-width: 921px) {
+    .cap {
+        transition-duration: 0.5s;
+        color: white;
+        text-decoration: none;
+        display: grid;
+        grid-template-columns: 50px 200px auto 150px 150px 150px 100px 50px;
+        grid-template-areas: ". logo . ib cb au lng .";
+        position: fixed;
+        left: 0;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        z-index: 99999;
+    }
+    .cap:hover {
+        transition-duration: 0.5s;
+        height: 60px !important;
+    }
+    .sb {
+        grid-area: sb;
+    }
+    .ib {
+        grid-area: ib;
+    }
+    .wb {
+        grid-area: wb;
+    }
+    .cb {
+        grid-area: cb;
+    }
+    .au {
+        grid-area: au;
+    }
+    .lng {
+        grid-area: lng;
+    }
+    .mobileBr {
+        visibility: hidden;
+    }
+    .sb, .ib, .wb, .cb, .lngб, .au {
+        text-decoration: none;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        font-size: 120%;
+        font-weight: bold;
+    }
+    .logo {
+        transition-duration: 0.1s;
+        padding: 0;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        grid-area: logo;
+    }
+    .mt {
+        text-align: center;
+        transition-duration: 0.5s;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        width: 150px;
+    }
+    .inc, .aisi, .titan {
 
-    text-decoration: none;
-    text-align: center;
-    padding-top: 8px;
-    margin: 0;
-    font-weight: bold;
+        text-decoration: none;
+        text-align: center;
+        padding-top: 8px;
+        margin: 0;
+        font-weight: bold;
+    }
+    .link {
+        transition-duration: 0.2s;
+        position: relative;
+        top: calc(50% - 0.75em);
+        padding: 0;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .link:hover {
+        transition-duration: 0.2s;
+    }
+    .link:active {
+        color: white;
+    }
+    button {
+        border: none;
+        background: none;
+        outline: none;
+        cursor: pointer;
+        font-size: large;
+        font-weight: bold;
+    }
+    .line {
+        display: inline-block;
+        transition-duration: 0.5s;
+        width: 80%;
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+        grid-area: ln;
+        border: none;
+        height: 2px;
+    }
+    .subLine {
+        position: absolute;
+        display: inline-block;
+        right: 325px;
+        bottom: 0;
+        transition-duration: 0.5s;
+        width: 100px;
+        margin: 0;
+        padding: 0;
+        border: none;
+        height: 2px;
+    }
+    .blink {
+        transition-duration: 0.1s;
+        position: relative;
+        top: calc(50% - 0.75em);
+        padding: 0 5px;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .blink:active {
+        color: white;
+    }
+    .blink:hover {
+        transition-duration: 0.1s;
+        font-size: 120%;
+    }
 }
-.link {
-    transition-duration: 0.1s;
-    position: relative;
-    top: calc(50% - 0.75em);
-    padding: 0;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
+@media screen and (max-width: 920px) {
+    .cap {
+        text-align: center;
+        height: 70px !important;
+        transition-duration: 0.5s;
+        color: white;
+        text-decoration: none;
+        position: fixed;
+        background: rgba(40, 44, 45, 1) !important;
+        left: 0;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        z-index: 99999;
+    }
+    .sb {
+        grid-area: sb;
+    }
+    .ib {
+        grid-area: ib;
+    }
+    .wb {
+        grid-area: wb;
+    }
+    .cb {
+        grid-area: cb;
+    }
+    .au {
+        grid-area: au;
+    }
+    .lng {
+        grid-area: lng;
+    }
+    .mobileBr {
+        visibility: visible;
+    }
+    .sb, .ib, .wb, .cb, .lng, .au {
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 15px;
+        font-size: 120%;
+        font-weight: bold;
+    }
+
+    .logo {
+        display: inline-block;
+        transition-duration: 0.1s;
+        padding: 0 10px 0 0;
+        height: 40px;
+    }
+    .link {
+        transition-duration: 0.2s;
+        position: relative;
+        top: calc(50% - 0.75em);
+        padding: 0;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .link:hover {
+        transition-duration: 0.2s;
+    }
+    .link:active {
+        color: white;
+    }
+    button {
+        border: none;
+        background: none;
+        outline: none;
+        cursor: pointer;
+        font-size: large;
+        font-weight: bold;
+    }
+    .line {
+        display: inline-block;
+        transition-duration: 0.5s;
+        width: 80%;
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+        grid-area: ln;
+        border: none;
+        height: 2px;
+    }
+    .subLine {
+        position: absolute;
+        display: inline-block;
+        right: 325px;
+        bottom: 0;
+        transition-duration: 0.5s;
+        width: 100px;
+        margin: 0;
+        padding: 0;
+        border: none;
+        height: 2px;
+    }
+    .blink {
+        transition-duration: 0.1s;
+        position: relative;
+        top: calc(50% - 0.75em);
+        padding: 0 5px;
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .blink:active {
+        color: white;
+    }
 }
-.mt .link {
-    transition-duration: 0.5s;
-    position: relative;
-    padding: 0;
-    margin: 0;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-}
-.mt .link:hover {
-    transition-duration: 0.1s;
-    font-size: 120% !important;
-}
-.link:active {
-    color: white;
-}
-.link:hover {
-    transition-duration: 0.1s;
-    font-size: 120%;
-}
-button {
-    border: none;
-    background: none;
-    outline: none;
-    cursor: pointer;
-    font-size: large;
-    font-weight: bold;
-}
-.line {
-    display: inline-block;
-    transition-duration: 0.5s;
-    width: 80%;
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
-    grid-area: ln;
-    border: none;
-    height: 2px;
-}
-.subLine {
-    position: absolute;
-    display: inline-block;
-    right: 325px;
-    bottom: 0;
-    transition-duration: 0.5s;
-    width: 100px;
-    margin: 0;
-    padding: 0;
-    border: none;
-    height: 2px;
-}
-.blink {
-    transition-duration: 0.1s;
-    position: relative;
-    top: calc(50% - 0.75em);
-    padding: 0 5px;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-}
-.blink:active {
-    color: white;
-}
-.blink:hover {
-    transition-duration: 0.1s;
-    font-size: 120%;
-}
+

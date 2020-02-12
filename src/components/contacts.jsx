@@ -16,14 +16,21 @@ export const Contacts = (props) => {
                         top: 0,
                         margin: 0,
                         padding: 0,
-                        height: "300px"
+                        height: "400px"
                     }}
-                    layers={[{
-                        backgroundScale: "cover",
-                        image: cntPanel,
-                        amount: 0.3,
-                        height: "300px"
-                    }]}/>
+                    layers={[
+                        {
+                            image: cntPanel,
+                            amount: 0.5,
+                            height: "400px"
+                        },
+                        {
+                            backgroundScale: "cover",
+                            image: local[localStorage.language].img_contacts,
+                            amount: 0.2,
+                            height: "400px"
+                        }
+                    ]}/>
                 <div className={s.pageName}>
                     <b>
                         {local[localStorage.language].contacts}
@@ -76,6 +83,7 @@ export const Contacts = (props) => {
                                 maxLength={"777"}
                                 className={s.commentField}
                                 name="message"
+                                defaultValue={props.generateDefaulttextForCommentField()}
                             />
                         </div>
                         <div className={s.btn}>

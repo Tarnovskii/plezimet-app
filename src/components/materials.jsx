@@ -1,8 +1,9 @@
 import React from 'react'
+import {local} from '../store/localization'
 import s from '../stylesheets/materials.module.css'
 import 'antd/dist/antd.css';
 import {ParallaxBanner, ParallaxProvider} from "react-scroll-parallax/cjs";
-import banner from '../img/materials/MaterialsBanner.png'
+import banner from '../img/materials/materialsBanner.jpg'
 import {Input, Select} from "antd";
 
 const {Option} = Select;
@@ -19,17 +20,31 @@ export const Materials = (props) => {
                         top: 0,
                         margin: 0,
                         padding: 0,
-                        height: "300px"
+                        height: "400px"
                     }}
-                    layers={[{
-                        backgroundScale: "cover",
-                        image: banner,
-                        amount: 0.2,
-                        height: "300px"
-                    }]}
+                    layers={[
+                        {
+                            backgroundScale: "cover",
+                            image: banner,
+                            amount: 0.5,
+                            height: "400px"
+                        },
+                        {
+                            backgroundScale: "cover",
+                            image: local[localStorage.language].img_materials,
+                            amount: 0.2,
+                            height: "400px"
+                        }
+                    ]}
                 />
-                <p style={{marginTop: "30px", fontSize: "18px"}}>
-                    На данной странице вы можете ознакомиться с нашими предложениями:
+                <p style={{
+                    marginTop: "30px",
+                    width: "55vw",
+                    minWidth: "800px",
+                    display: "inline-block",
+                    fontSize: "18px"
+                }}>
+                    {local[localStorage.language].material_banner}
                 </p>
                 <div style={{display: "inline-block"}}>
                     <div className={s.toolBox}>
@@ -37,7 +52,7 @@ export const Materials = (props) => {
                             <Search
                                 value={props.getSearchValue()}
                                 onChange={(e) => props.setSearchValueInFieldAndSearch(e.target.value)}
-                                placeholder="Search"
+                                placeholder={local[localStorage.language].search}
                                 style={{
                                     height: "100%",
                                     width: "100%",
@@ -45,14 +60,13 @@ export const Materials = (props) => {
                             />
                         </div>
                         <div className={s.searchTypeWrapper}>
-
                             <Select
                                 mode="multiple"
                                 style={{
                                     height: "100%",
                                     width: "100%",
                                 }}
-                                placeholder="Выбрать тип сплава"
+                                placeholder={local[localStorage.language].alloy_type}
                                 onChange={(e) => props.setNewTypesArray(e)}
                             >
                                 <Option value="inconel"> Inconel </Option>
@@ -63,18 +77,18 @@ export const Materials = (props) => {
                         </div>
                         <div className={s.sortWrapper}>
                             <Select
-                                disabled
                                 mode="multiple"
                                 style={{
                                     height: "100%",
                                     width: "100%",
                                 }}
-                                placeholder="Выбрать вид готового материала"
+                                placeholder={local[localStorage.language].product_type}
                                 onChange={(e) => props.setNewFormFactorsArray(e)}
                             >
-                                <Option value="shavings"> Стружка </Option>
-                                <Option value="ingot"> Слиток </Option>
-                                <Option value="sheet"> Лист </Option>
+                                <Option value="scrap"> {local[localStorage.language].scrap} </Option>
+                                <Option value="shavings"> {local[localStorage.language].shavings} </Option>
+                                <Option value="hardened_ingot"> {local[localStorage.language].hardened_ingot} </Option>
+                                <Option value="ingot"> {local[localStorage.language].ingot} </Option>
                             </Select>
                         </div>
                     </div>

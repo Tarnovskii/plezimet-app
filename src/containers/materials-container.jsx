@@ -1,4 +1,5 @@
 import React from 'react'
+import {local} from '../store/localization'
 import {Materials} from "../components/materials";
 import {materialsData} from "../store/materialsData";
 import s from '../stylesheets/materials.module.css'
@@ -27,7 +28,18 @@ export class MaterialsContainer extends React.Component {
     setNewFormFactorsArray = (newArray) => {
         this.setState({
             formFactorsArray: newArray
-        })
+        });
+        console.log(newArray)
+    };
+
+    checkFormFactors = (formFactors) => {
+        let isOk = false;
+        this.state.formFactorsArray.forEach((elem) => {
+            if (formFactors.indexOf(elem) !== -1) {
+                isOk = true;
+            }
+        });
+        return isOk;
     };
 
     generateCompositionArrayFromObject = (composition) => {
@@ -43,50 +55,37 @@ export class MaterialsContainer extends React.Component {
         // eslint-disable-next-line array-callback-return
         let mappedMaterialsArray = materialsData.map((elem, index) => {
             if (elem.fullName.toLowerCase().indexOf(this.state.searchValue.toLowerCase()) !== -1) {
-                if (this.state.typesArray.length === 0) {
+                if (
+                    ((this.state.typesArray.length === 0) || (this.state.typesArray.indexOf(elem.type) !== -1))
+                    &&
+                    ((this.state.formFactorsArray.length === 0) || (this.checkFormFactors(elem.formFactor)))
+                ) {
                     somethingWasFounded = true;
                     return (
-                        <div key={index} style={{display: "inline-block"}}>
+                        <div style={{display: "inline-block"}}>
                             <div className={s.materialBlock}>
                                 <div className={s.materialName}>
                                     <p>{elem.fullName}</p>
                                 </div>
                                 <div className={s.materialFormFactor}>
-                                    <p> Вид готового материала: </p>
-                                    {elem.formFactor.map((form) => (<p> {form} </p>))}
-                                </div>
-                                <div className={s.materialComposition}>
-                                    <p>Состав(%): </p>
-                                    <table className={s.compositionTable}>
-                                        <tr style={{fontWeight: "bold", background: "#F7F7F7"}}>
-                                            {this.generateCompositionArrayFromObject(elem.compositions).map((composition) => (
-                                                <td>{Object.keys(composition).toString()}</td>
-                                            ))}
-                                        </tr>
-                                        <tr>
-                                            {this.generateCompositionArrayFromObject(elem.compositions).map((composition) => (
-                                                <td>{composition[Object.keys(composition).toString()]}</td>
-                                            ))}
-                                        </tr>
+                                    <table className={s.materialFromFactorTable}>
+                                        <th>
+                                            Form
+                                        </th>
+                                        {elem.formFactor.map((elem) => {
+                                            return <tr>{local[localStorage.language][elem]}</tr>
+                                        })}
                                     </table>
-                                </div>
-                            </div>
-                        </div>
-                    );
-                } else if (this.state.typesArray.indexOf(elem.type) !== -1) {
-                    somethingWasFounded = true;
-                    return (
-                        <div key={index} style={{display: "inline-block"}}>
-                            <div className={s.materialBlock}>
-                                <div className={s.materialName}>
-                                    <p>{elem.fullName}</p>
-                                </div>
-                                <div className={s.materialFormFactor}>
-                                    <p> Вид готового материала: </p>
-                                    {elem.formFactor.map((form) => (<p> {form} </p>))}
+                                    <div className={s.wantThisButtonWrapper}>
+                                        <a className={s.toContacts} key={index}
+                                           style={{display: "inline-block"}}
+                                           href={`/${localStorage.language}/contacts/?material=${elem.fullName}`}>Write
+                                            us about this!
+                                        </a>
+                                    </div>
                                 </div>
                                 <div className={s.materialComposition}>
-                                    <p>Состав(%): </p>
+                                    <p>{local[localStorage.language].chemichal_composition}</p>
                                     <table className={s.compositionTable}>
                                         <tr style={{fontWeight: "bold", background: "#F7F7F7"}}>
                                             {this.generateCompositionArrayFromObject(elem.compositions).map((composition) => (

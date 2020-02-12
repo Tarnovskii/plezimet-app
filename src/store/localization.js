@@ -1,5 +1,4 @@
 import ruspolymet_ru from '../img/ru/ruspolymet.png'
-import ruspolymet_es from '../img/es/ruspolymet.png'
 import ruspolymet_en from '../img/en/ruspolymet.png'
 
 import diagram_ru from '../img/ru/diagram.png'
@@ -10,16 +9,41 @@ import track_ru from '../img/ru/track.png'
 import track_es from '../img/es/track.png'
 import track_en from '../img/en/track.png'
 
+import materials_ru from '../img/ru/materials_ru.png'
+import materials_es from '../img/es/materials_es.png'
+import materials_en from '../img/en/materials_en.png'
+
+import contacts_ru from '../img/ru/contacts_ru.png'
+import contacts_en from '../img/en/contacts_en.png'
+import contacts_es from '../img/es/contacts_es.png'
+
 export const local = {
     ru: {
         img_diagram: diagram_ru,
         img_ruspolymet: ruspolymet_ru,
         img_track: track_ru,
+        img_materials: materials_ru,
+        img_contacts: contacts_ru,
 
+        hardened_ingot:
+            "Кованый слиток",
+        ingot:
+            "Слиток",
+        shavings:
+            "Стуржка",
+        scrap:
+            "Лом",
+        alloy_type:
+            "Выберите сплав",
+        product_type:
+            "Выбрать вид материала",
+        chemichal_composition:
+            "Хим.состав, %",
+        material_banner:
+            "На данной странице вы можете ознакомиться с нашими предложениями купли и продажи материала." +
+            "Для более подробной информации о наличии и другим вопросам - свяжитесь с нами.",
         banner_excerption:
-            "The progress is the best, not only the newest.",
-        excerption_author:
-            "Lope de Vega",
+            "Где качество становиться стандартом",
         label_header:
             "Знаем всё и каждое о металлургии",
         label_text:
@@ -76,7 +100,7 @@ export const local = {
         contacts:
             "Контакты",
         aboutus:
-            "О нас",
+            "Plezimet",
         mainpage:
             "Главная",
         contactus:
@@ -96,17 +120,36 @@ export const local = {
         we_are_here:
             "Найс найти можно тут:",
         map_discp:
-            "Нажмите на маркер чтобы открыть полную карту в новой вкладке!"
+            "Нажмите на маркер чтобы открыть полную карту в новой вкладке!",
+        search:
+            "Поиск"
     },
     en: {
         img_diagram: diagram_en,
         img_ruspolymet: ruspolymet_en,
         img_track: track_en,
+        img_materials: materials_en,
+        img_contacts: contacts_en,
 
+        hardened_ingot:
+            "Forged ingot",
+        ingot:
+            "Ingot",
+        shavings:
+            "Shavings",
+        scrap:
+            "Scrap",
+        alloy_type:
+            "Select alloy",
+        product_type:
+            "Select product type",
+        chemichal_composition:
+            "Chemical composition, %",
+        material_banner:
+            "On this page you can found our offers for purchase and sale of material. For more information" +
+            "on availability and other questions, please contact us.",
         banner_excerption:
-            "The progress is the best, not only the newest.",
-        excerption_author:
-            "Lope de Vega",
+            "Where quality becomes a standart",
         label_header:
             "We know everything and each about metallurgy",
         label_text:
@@ -161,7 +204,7 @@ export const local = {
         contacts:
             "Contacts",
         aboutus:
-            "About us",
+            "Plezimet",
         mainpage:
             "Main page",
         contactus:
@@ -181,17 +224,36 @@ export const local = {
         we_are_here:
             "You can find us here:",
         map_discp:
-            "Click on the marker to open the full map in a new tab!"
+            "Click on the marker to open the full map in a new tab!",
+        search:
+            "Search"
     },
     es: {
         img_diagram: diagram_es,
-        img_ruspolymet: ruspolymet_es,
+        img_ruspolymet: ruspolymet_en,
         img_track: track_es,
+        img_materials: materials_es,
+        img_contacts: contacts_es,
 
+        hardened_ingot:
+            "Lingote forjado",
+        ingot:
+            "Lingote",
+        shavings:
+            "Virutas",
+        scrap:
+            "Chatarra",
+        alloy_type:
+            "Elegir aleación",
+        product_type:
+            "Elegir aleación",
+        chemichal_composition:
+            "Elegir tipo de material",
+        material_banner:
+            "En esta página puede encontrar nuestras ofertas de compra y venta de material." +
+            "Para obtener más información sobre disponibilidad y otras preguntas, contáctenos.",
         banner_excerption:
-            "The progress is the best, not only the newest.",
-        excerption_author:
-            "Lope de Vega",
+            "Donde la calidad se convierte en un estándar",
         label_header:
             "Sabemos todo y cada uno sobre metalurgia",
         label_text:
@@ -248,7 +310,7 @@ export const local = {
         contacts:
             "Contactos",
         aboutus:
-            "Sobre nosotros",
+            "Plezimet",
         mainpage:
             "Inicio",
         contactus:
@@ -268,6 +330,8 @@ export const local = {
         we_are_here:
             "Oficina central:",
         map_discp:
-            "¡Haga clic en el marcador para abrir el mapa completo en una nueva pestaña!"
+            "¡Haga clic en el marcador para abrir el mapa completo en una nueva pestaña!",
+        search:
+            "Buscar"
     }
 };

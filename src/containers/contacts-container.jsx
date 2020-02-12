@@ -18,11 +18,18 @@ export class ContactsContainer extends React.Component {
         this.userEmailFieldHandler.bind(this);
         this.userNameFieldHandler.bind(this);
         this.companyNameFieldHandler.bind(this);
+        this.generateDefaulttextForCommentField.bind(this);
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log(this.state);
+        window.scrollTo(0,0)
     }
+
+    generateDefaulttextForCommentField = () => {
+        let material = new URLSearchParams(window.location.search).get("material");
+        if (material !== null) return `Hallo, i want to talk about "${material}". Please call me!`;
+        else return ''
+    };
 
     sendEmail = (e) => {
         console.log(e.target);
@@ -65,6 +72,7 @@ export class ContactsContainer extends React.Component {
     render() {
         return (
             <Contacts
+                generateDefaulttextForCommentField={this.generateDefaulttextForCommentField}
                 userNameFieldValue={this.state._userNameFieldValue}
                 userNameFieldHandler={this.userNameFieldHandler}
                 userEmailFieldValue={this.state._userEmailFieldValue}

@@ -7,14 +7,17 @@ import {local} from "../store/localization";
 export const Header = (props) => {
     return (
         <div
+            onMouseEnter={() => {props.mouseEnterLeaveHandler('enter')}}
+            onMouseLeave={() => {props.mouseEnterLeaveHandler('leave')}}
             className={s.cap}
             style={{
                 background: `rgba(40, 44, 45, ${props.opacity})`,
                 height: props.height
             }}>
-            <div className={s.logo}>
-                <a href={`/${localStorage.language}/#main`}> <img className={s.logo} src={logo} alt="logo"/> </a>
-            </div>
+
+            <a className={s.logoLink} href={`/${localStorage.language}/#main`}> <img className={s.logo} src={logo} alt="logo"/> </a>
+
+            <br className={s.mobileBr}/>
 
             <div className={s.ib}>
                 <a href={`/${localStorage.language}/materials`}

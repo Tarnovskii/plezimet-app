@@ -51,12 +51,11 @@
     padding: 0;
     margin: 0;
 }
-
 .materialBlock {
     text-align: center;
     border-radius: 7px;
     border: 2px solid #D9D9D9;
-    height: 180px;
+    height: 210px;
     min-width: 800px;
     margin: 15px;
     padding: 10px;
@@ -72,15 +71,30 @@
 }
 
 .materialName {
+    color: #ae002e;
     padding-top: 5px;
     grid-area: name;
+}
+.materialFromFactorTable {
+    margin-top: 10px;
+    display: inline-block;
+    width: 120px;
+}
+.materialFromFactorTable tr {
+    width: inherit;
+    text-align: center;
+    border: 1px solid #D9D9D9;
+}
+.materialFromFactorTable th{
+    width: inherit;
+    background-color: #F7F7F7;
+    border: 1px solid #D9D9D9;
 }
 .materialFormFactor {
     border-left: 1px solid #bec5c6;
     grid-area: ff;
 }
 .materialComposition {
-    padding-top: 10px;
     margin-right: 10px;
     grid-area: comp;
 }
@@ -91,6 +105,19 @@
     display: inline-block;
 }
 
+.toContacts {
+    transition: 0.2s all;
+    color: black;
+    background-color: #F7F7F7;
+    width: 120px;
+    border: 1px solid #D9D9D9;
+}
+.toContacts:hover {
+    color: white;
+    background-color: #46B1FB;
+    cursor: pointer;
+
+}
 
 .materialsListWrapper {
     margin-top: 30px;
@@ -105,16 +132,23 @@
     margin-right: 10px;
 }
 
+.wantThisButtonWrapper {
+    padding-top: 10px;
+    width: 100%;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+}
+
 .compositionTable {
+    border: 1px solid #D9D9D9;
     width: 100%;
     margin-top: 10px;
 }
-
 .compositionTable td {
     min-width: 30px;
     border: 1px solid #D9D9D9;
 }
-
 .compositionTable tr {
     height: 30px;
 }

@@ -1,6 +1,16 @@
+:root {
+    --label-color:  #ae002e;
+}
+
 .App {
-    min-width: 800px !important;
+    left: 0;
+    right: 0;
     padding: 0;
     margin: 0;
     text-align: center;
+    overflow-x: hidden;
+}
+b {
+    color:  var(--label-color);
+    font-size: xx-large;
 }
