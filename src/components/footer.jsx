@@ -1,7 +1,9 @@
 import React from 'react'
 import s from '../stylesheets/footer.module.css'
-import {NavLink} from "react-router-dom";
 import {local} from '../store/localization'
+import ru_lng from "../img/ru_lng.gif";
+import eng_lng from "../img/eng_lng.gif";
+import es_lng from "../img/es_lng.gif";
 
 export const Footer = (props) => {
     return (
@@ -9,23 +11,23 @@ export const Footer = (props) => {
             <div className={s.menu}>
                 <a href='/#main'> {local[localStorage.language].mainpage} </a>
                 <br/>
-                <NavLink className={s.link} to="/materials">  {local[localStorage.language].materials} </NavLink>
+                <a className={s.link} href={`/${localStorage.language}/materials`}>  {local[localStorage.language].materials} </a>
                 <br/>
-                <a className={s.link} href="/#aboutus"> {local[localStorage.language].aboutus}</a>
+                <a className={s.link} href={`/${localStorage.language}/#ourhistory`}> {local[localStorage.language].aboutus}</a>
                 <br/>
-                <NavLink className={s.link} to="/contacts">  {local[localStorage.language].contacts} </NavLink>
+                <a className={s.link} href={`/${localStorage.language}/contacts`}>  {local[localStorage.language].contacts} </a>
             </div>
             <div className={s.lng}>
-                <button onClick={() => props.setLanguage("ru")}><img
-                    src={"http://www.200stran.ru/images/country/1242463244_732ac7.gif"} alt={"ru"}/> Русский
+                <button className={s.lngButton} onClick={() => props.setLanguage("ru")}><img
+                    src={ru_lng} alt={"ru"}/> Русский
                 </button>
                 <br/>
-                <button onClick={() => props.setLanguage("eng")}><img
-                    src={"http://www.200stran.ru/images/country/1242421831_5ee831.gif"} alt={"en"}/> English
+                <button className={s.lngButton} onClick={() => props.setLanguage("en")}><img
+                    src={eng_lng} alt={"en"}/> English
                 </button>
                 <br/>
-                <button onClick={() => props.setLanguage("es")}><img
-                    src={"http://www.200stran.ru/images/country/1242422837_d3963c.gif"} alt={"es"}/> Español
+                <button className={s.lngButton} onClick={() => props.setLanguage("es")}><img
+                    src={es_lng} alt={"es"}/> Español
                 </button>
             </div>
             <div className={s.adr}>

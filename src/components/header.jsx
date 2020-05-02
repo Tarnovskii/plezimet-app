@@ -2,6 +2,9 @@ import React from 'react'
 import s from '../stylesheets/header.module.css'
 import logo from '../img/logo.png'
 import {local} from "../store/localization";
+import ru_lng from '../img/ru_lng.gif'
+import es_lng from '../img/es_lng.gif'
+import eng_lng from '../img/eng_lng.gif'
 
 
 export const Header = (props) => {
@@ -20,8 +23,7 @@ export const Header = (props) => {
             <br className={s.mobileBr}/>
 
             <div className={s.ib}>
-                <a href={`/${localStorage.language}/materials`}
-                   className={s.link}> {local[localStorage.language].materials} </a>
+                <a className={s.link} href={`/${localStorage.language}/materials`}>  {local[localStorage.language].materials} </a>
             </div>
 
             <div className={s.cb}>
@@ -34,13 +36,13 @@ export const Header = (props) => {
 
             <div className={s.lng}>
                 <button className={s.blink} onClick={() => props.setLanguage("ru")}><img
-                    src={"http://www.200stran.ru/images/country/1242463244_732ac7.gif"} alt={"ru"}/>
+                    src={ru_lng} alt={"ru"}/>
                 </button>
                 <button className={s.blink} onClick={() => props.setLanguage("en")}><img
-                    src={"http://www.200stran.ru/images/country/1242421831_5ee831.gif"} alt={"en"}/>
+                    src={eng_lng} alt={"en"}/>
                 </button>
                 <button className={s.blink} onClick={() => props.setLanguage("es")}><img
-                    src={"http://www.200stran.ru/images/country/1242422837_d3963c.gif"} alt={"es"}/>
+                    src={es_lng} alt={"es"}/>
                 </button>
             </div>
 

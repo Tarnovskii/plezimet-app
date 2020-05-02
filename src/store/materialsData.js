@@ -84,35 +84,35 @@ export const materialsData = [
     },
     {
         type: "aisi",
-        fullName: "AISI 304 | UNS S30400 | X5CrNi18-10 | 1.4301",
+        fullName: "AISI 304L | UNS S30403 | X2CrNi18-9 | 1.4307",
         formFactor:
             ["scrap", "hardened_ingot", "ingot"],
         compositions:
             {
-                C: 0.07,
+                C: 0.03,
                 Mn: 2.00,
                 P: 0.045,
-                S: 0.030,
-                Si: 1.00,
+                S: 0.015,
+                Si: 0.75,
                 Cr: "17.50 - 19.50",
-                Ni: "8.00 - 10.50",
+                Ni: "8.00 - 10.00",
                 Fe: "BAL",
             },
     },
     {
         type: "aisi",
-        fullName: "AISI 316 | UNS S31603 | X5CrNiMo17-12-2 | 1.4401",
+        fullName: "AISI 316L | UNS S31603 | X2CrNiMo17-12-2 | 1.4404",
         formFactor:
             ["scrap", "hardened_ingot", "ingot"],
         compositions:
             {
-                C: 0.07,
+                C: 0.03,
                 Mn: 2.00,
-                P: 0.045,
+                P: 0.040,
                 S: 0.03,
-                Si: 1.00,
-                Cr: "16.00 - 18.50",
-                Ni: "9.50 - 13.00",
+                Si: 0.75,
+                Cr: "16.00 - 18.00",
+                Ni: "10.00 - 12.00",
                 Mo: "2.00 - 2.50",
             },
     },

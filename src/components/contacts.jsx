@@ -11,6 +11,7 @@ export const Contacts = (props) => {
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid,jsx-a11y/anchor-has-content */}
             <ParallaxProvider>
                 <ParallaxBanner
+                    className={s.paralax}
                     expanded={false}
                     style={{
                         top: 0,
@@ -78,7 +79,7 @@ export const Contacts = (props) => {
                             <input className={s.inputField} type="text" name="contact_number"/>
                         </div>
                         <div className={s.comment}>
-                            <label>{local[localStorage.language].comment} &nbsp;</label>
+                            <label>{local[localStorage.language].yrcomment} &nbsp;</label>
                             <textarea
                                 maxLength={"777"}
                                 className={s.commentField}

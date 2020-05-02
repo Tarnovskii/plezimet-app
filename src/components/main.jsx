@@ -5,9 +5,8 @@ import ScrollAnimation from 'react-animate-on-scroll'
 import {local} from '../store/localization'
 import "animate.css/animate.min.css"
 import doc from '../img/doc.jpg'
-import build from '../img/build.jpg'
+import build from '../img/build.jpeg'
 import favicon from '../img/favicon.png'
-
 export const Main = () => {
     return (
         <ParallaxProvider>
@@ -29,9 +28,10 @@ export const Main = () => {
             <div className={s.panel}>
                 <div className={s.fadeIn}>
                     <img className={s.faviconPanel} src={favicon} alt={"favicon"}/>
-                    <p className={s.panelMainText}>
+                    <br/>
+                    <b className={s.panelMainText}>
                         {local[localStorage.language].banner_excerption}
-                    </p>
+                    </b>
                 </div>
             </div>
             <div className={s.about}>
@@ -53,19 +53,19 @@ export const Main = () => {
             </div>
             <div className={s.block}>
                 <img src={local[localStorage.language].img_ruspolymet} alt={"rplogo"} className={s.ruspolymetLogo}/>
-                <div> {local[localStorage.language].ruspolimet} </div>
+                <p> {local[localStorage.language].ruspolimet} </p>
                 <div onClick={() => {
                     window.open("/docs", "_blank")
                 }} className={s.doc}>
-                    <div style={{height: 'inherit', overflowX: "auto"}}>
-                        <img src={doc} alt={"doc"} style={{width: "100%"}}/>
-                    </div>
+                    <img src={doc} alt={"doc"} style={{width: "100%"}}/>
                 </div>
+                <hr className={s.line}/>
+
             </div>
             <div className={s.track}>
                 <ScrollAnimation animateIn='bounceInRight' animateOut='bounceOutLeft'>
                     <img src={local[localStorage.language].img_track} alt={"track"}
-                         style={{height: "280px", paddingTop: "10px"}}/>
+                         style={{width: "60%", paddingTop: "10px", paddingBottom: "50px"}}/>
                 </ScrollAnimation>
                 {/* eslint-disable-next-line jsx-a11y/anchor-has-content,jsx-a11y/anchor-is-valid */}
                 <a id="ourhistory"/>

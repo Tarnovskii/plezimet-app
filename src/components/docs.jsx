@@ -3,8 +3,8 @@ import doc from '../img/doc.jpg'
 
 export const Doc = () => {
     return (
-        <div>
-            <img src={doc} alt={""}/>
+        <div style={{width: "100vw", textAlign: "center"}}>
+            <img src={doc} alt={""} style={{width: "80%", display: "inline-block"}}/>
         </div>
     )
 }

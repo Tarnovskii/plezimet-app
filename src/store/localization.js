@@ -40,12 +40,12 @@ export const local = {
         chemichal_composition:
             "Хим.состав, %",
         material_banner:
-            "На данной странице вы можете ознакомиться с нашими предложениями купли и продажи материала." +
+            "На данной странице вы можете ознакомиться с нашими предложениями купли и продажи материала. " +
             "Для более подробной информации о наличии и другим вопросам - свяжитесь с нами.",
         banner_excerption:
             "Где качество становиться стандартом",
         label_header:
-            "Знаем всё и каждое о металлургии",
+            "МЫ РАБОТАЕМ ДЛЯ ВАШЕГО УСПЕХА",
         label_text:
             "«Plezimet Group» - это уникальная компания, " +
             "предоставляющая услуги в области металлургии в Европе и СНГ. " +
@@ -53,44 +53,44 @@ export const local = {
             "философия компании позволяют нам занимать лидирующие " +
             "позиции в европейском секторе.",
         services:
-            "Наши основные направления",
+            "НАШИ ОСНОВНЫЕ НАПРАВЛЕНИЯ",
         ruspolimet:
             "Начиная с ноября 2019 года мы рады сообщить, " +
             "что являемся официальными представителями завода ПАО «РУСПОЛИМЕТ» " +
             "на территории Испании и Франции. " +
             "Благодаря чему, Plezimet Group является уверенным игроком на " +
-            "рынке продукцции авиационной и судостроительной отрасли.",
+            "рынке продукции авиационной и судостроительной отрасли.",
         ourhistory_label:
-            "Наша история",
+            "НАША ИСТОРИЯ",
         ourhistory:
-            "Совершив первую сделаку в 1997 году и пройдя с того дня длительный и сложный путь, " +
+            "Совершив первую сделку в 1997 году и пройдя с того дня длительный и сложный путь, " +
             "Plezimet Group стал уникальной компанией предоставляющей услуги " +
             "в сфере металлургии и сталеплавления на территории Европы. " +
             "Основным рынком компании являются специальные стали, " +
-            "предназначеные для авиационно, судостроительной и нефтезагохимической промышленостей. " +
+            "предназначенные для авиационно, судостроительной и нефтезагохимической промышленностей. " +
             "Огромный опыт и любовь к своему делу привело Plezimet Group на лидирующие позиции рынка. ",
         ourvalues:
-            "Наши ценности",
+            "НАШИ ЦЕННОСТИ",
         customer:
-            "ВЫ",
+            "Клиент",
         customer_discp:
-            "Мы ценим каждого нашого клиента",
+            "Мы ценим каждого нашего клиента",
         environment:
-            "ОКРУЖАЮЩИЙ МИР",
+            "Окружающий мир",
         environment_discp:
             "Переработка материала и забота о мире, в котором мы живём",
         technology:
-            "ТЕХНОЛОГИИ",
+            "Технологии",
         technology_discp:
             "Используем только самые эффективные и новые технологии",
         result:
-            "РЕЗУЛЬТАТ",
+            "Результат",
         result_discp:
             "Работаем до достижения идеального результата",
         ourvision_label:
-            "Наш взгляд и философия",
+            "НАШ ВЗГЛЯД И ФИЛОСОФИЯ",
         ourvision:
-            "Plezimet Group позиционирует себя как уникальная компания, преподносящая на " +
+            "Plezimet Group позиционирует себя как уникальная компания, предоставляющая на " +
             "рынок металлургии ранее не развитые услуги и взаимоотношения между " +
             "компаниями. Основной ценностью любого металлурга является его знания и опыт. " +
             "Осознавая это, мы, в первую очередь, сконцентрированы на новейших технологиях " +
@@ -100,11 +100,11 @@ export const local = {
         contacts:
             "Контакты",
         aboutus:
-            "Plezimet",
+            "О нас",
         mainpage:
             "Главная",
         contactus:
-            "Для связи с нами, достаточно заполнить форму ниже",
+            "Для связи с нами, достаточно заполнить форму ниже:",
         yrname:
             "Ваше имя: ",
         yrpostbox:
@@ -114,15 +114,17 @@ export const local = {
         yrphone:
             "Телефон: ",
         yrcomment:
-            "Комментарий",
+            "Ваше сообщение:",
         send:
             "Отправить",
         we_are_here:
-            "Найс найти можно тут:",
+            "Нас найти можно тут:",
         map_discp:
-            "Нажмите на маркер чтобы открыть полную карту в новой вкладке!",
+            "Нажмите на маркер чтобы открыть полную карту в новой вкладке",
         search:
-            "Поиск"
+            "Поиск",
+        fast_feedback:
+            "Заказать"
     },
     en: {
         img_diagram: diagram_en,
@@ -149,22 +151,22 @@ export const local = {
             "On this page you can found our offers for purchase and sale of material. For more information" +
             "on availability and other questions, please contact us.",
         banner_excerption:
-            "Where quality becomes a standart",
+            "Where quality becomes a standard",
         label_header:
-            "We know everything and each about metallurgy",
+            "WE WORK FOR YOUR SUCCESS",
         label_text:
             "Plezimet Group is a unique company providing metallurgic services in Europe and the " +
             "CIS. Many years of experience in the metallurgical sector and a unique philosophy of the " +
             "company allow us to occupy leading positions in the European sector.",
         services:
-            "Our main services",
+            "OUR MAIN SERVICES",
         ruspolimet:
             "From November 2019, we are pleased to announce " +
             "that we are the official representatives of the RUSOLYMET PJSC plant on the territory of " +
             "Spain and France. As a result, the Plezimet Group is a confident player in the aviation " +
             "and shipbuilding industries.",
         ourhistory_label:
-            "Our history",
+            "OUR HISTORY",
         ourhistory:
             "Completing our first transaction in 1997 and since that day, " +
             "having followed a long and difficult path, Plezimet Group has become " +
@@ -173,7 +175,7 @@ export const local = {
             "shipbuilding and petrochemical industries. Great experience and love for " +
             "our work brought Plezimet Group to the leading market positions.",
         ourvalues:
-            "Our values",
+            "OUR VALUES",
         customer:
             "CUSTOMER",
         customer_discp:
@@ -191,7 +193,7 @@ export const local = {
         result_discp:
             "We work till we achieve the perfect result",
         ourvision_label:
-            "Our vision and philosophy",
+            "OUR VISION AND PHILOSOPHY",
         ourvision:
             "Plezimet Group position itself as a unique company, " +
             "presenting previously undeveloped services and relationships " +
@@ -204,11 +206,11 @@ export const local = {
         contacts:
             "Contacts",
         aboutus:
-            "Plezimet",
+            "About us",
         mainpage:
             "Main page",
         contactus:
-            "To contact us, just fill out the form below:",
+            "To contact us, just fill out the form below.",
         yrname:
             "Your name: ",
         yrpostbox:
@@ -218,15 +220,17 @@ export const local = {
         yrphone:
             "Phone: ",
         yrcomment:
-            "Comment",
+            "Message:",
         send:
             "Send",
         we_are_here:
             "You can find us here:",
         map_discp:
-            "Click on the marker to open the full map in a new tab!",
+            "Click on the marker to open the full map in a new tab",
         search:
-            "Search"
+            "Search",
+        fast_feedback:
+            "Order"
     },
     es: {
         img_diagram: diagram_es,
@@ -246,16 +250,16 @@ export const local = {
         alloy_type:
             "Elegir aleación",
         product_type:
-            "Elegir aleación",
-        chemichal_composition:
             "Elegir tipo de material",
+        chemichal_composition:
+            "Composición química, %",
         material_banner:
             "En esta página puede encontrar nuestras ofertas de compra y venta de material." +
             "Para obtener más información sobre disponibilidad y otras preguntas, contáctenos.",
         banner_excerption:
             "Donde la calidad se convierte en un estándar",
         label_header:
-            "Sabemos todo y cada uno sobre metalurgia",
+            "NOSOTROS TRABAJAMOS PARA SU ÉXITO",
         label_text:
             "«Plezimet Group» - es una empresa única " +
             "que ofrece servicios metalúrgicos en Europa y la CEI. " +
@@ -263,7 +267,7 @@ export const local = {
             "de la compañía única, nos permiten ocupar posiciones superiores " +
             "en el sector europeo.",
         services:
-            "Nuestras posiciones principales",
+            "NUESTROS SERVICIOS PRINCIPALES",
         ruspolimet:
             "Desde noviembre de 2019, nos complace anunciar " +
             "que somos los representantes oficiales de la planta RUSOLYMET PJSC " +
@@ -271,7 +275,7 @@ export const local = {
             "Como resultado, Plezimet Group es un jugador seguro en las industrias " +
             "de aviación y construcción naval.",
         ourhistory_label:
-            "Nuestra historia",
+            "NUESTRA HISTORIA",
         ourhistory:
             "Completando nuestra primera transacción en 1997 y desde ese día, después de haber seguido " +
             "un camino largo y difícil, Plezimet Group se ha convertido en una compañía única " +
@@ -280,7 +284,7 @@ export const local = {
             "fabricados para las industrias de aviación, construcción naval y petroquímica. " +
             "La gran experiencia y el amor por nuestro trabajo llevaron Plezimet Group a las primeras posiciones del mercado. ",
         ourvalues:
-            "Valores",
+            "VALORES",
         customer:
             "Cliente",
         customer_discp:
@@ -298,10 +302,10 @@ export const local = {
         result_discp:
             "Trabajamos hasta lograr el resultado perfecto",
         ourvision_label:
-            "Visión y filosofía",
+            "VISIÓN Y FILOSOFÍA",
         ourvision:
             "Plezimet Group se posiciona como una empresa única, presentando servicios " +
-            "y relaciones previamente no desarrolladas entre compañías en el mercado metalurgico." +
+            "y relaciones previamente no desarrolladas entre compañías en el mercado metalúrgico." +
             "El principal valor de cualquier metalúrgico es su conocimiento y experiencia." +
             "Al darnos cuenta de esto, estamos enfocados principalmente en las últimas tecnologías y" +
             "métodos de trabajo que nos permiten desarrollar la industria metalúrgica. ",
@@ -310,11 +314,11 @@ export const local = {
         contacts:
             "Contactos",
         aboutus:
-            "Plezimet",
+            "Nosotros",
         mainpage:
             "Inicio",
         contactus:
-            "Para contactarnos, simplemente complete el formulario a continuación",
+            "Para contactarnos, simplemente complete el formulario a continuación.",
         yrname:
             "Nombre: ",
         yrpostbox:
@@ -324,7 +328,7 @@ export const local = {
         yrphone:
             "Telefono: ",
         yrcomment:
-            "Mensaje",
+            "Mensaje:",
         send:
             "Enviar",
         we_are_here:
@@ -332,6 +336,8 @@ export const local = {
         map_discp:
             "¡Haga clic en el marcador para abrir el mapa completo en una nueva pestaña!",
         search:
-            "Buscar"
+            "Buscar",
+        fast_feedback:
+            "Pedir"
     }
 };

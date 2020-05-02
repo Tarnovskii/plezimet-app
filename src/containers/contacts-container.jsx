@@ -1,6 +1,7 @@
 import React from 'react'
 import emailjs from "emailjs-com";
 import {Contacts} from "../components/contacts";
+import {local} from "../store/localization";
 
 export class ContactsContainer extends React.Component {
     constructor(props) {
@@ -21,8 +22,8 @@ export class ContactsContainer extends React.Component {
         this.generateDefaulttextForCommentField.bind(this);
     }
 
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        window.scrollTo(0,0)
+    componentDidMount() {
+        window.document.title=local[localStorage.language].contacts
     }
 
     generateDefaulttextForCommentField = () => {

@@ -25,7 +25,6 @@
     .panelMainText {
         font-size: xx-large;
         color: white;
-        font-weight: bold;
     }
     .faviconPanel {
         padding-top: -30px;
@@ -145,7 +144,6 @@
         border: none;
         text-align: center;
         margin: 5px;
-        font-weight: 700;
         font-size: x-large;
         transition-duration: 0.1s;
         color: white;
@@ -225,15 +223,11 @@
     .panelMainText {
         font-size: xx-large;
         color: white;
-        font-weight: bold;
     }
     .faviconPanel {
-        padding-top: -30px;
-        width: 8vw;
-
-        -webkit-animation:spin 8s linear infinite;
-        -moz-animation:spin 8s linear infinite;
-        animation:spin 8s linear infinite;
+        padding-top: -60px;
+        width: 10vw;
+        padding-bottom: 50px;
     }
     .about {
         margin-top: 40px;
@@ -249,7 +243,7 @@
         height: 1px;
     }
     .diagram {
-        padding-bottom: 20px;
+        padding-bottom: 40px;
         padding-top: 20px;
         width: var(--content-width);
     }
@@ -275,7 +269,7 @@
         text-align: center;
     }
     .block {
-        margin-top: 60px;
+        margin-top: 40px;
         display: inline-block;
     }
     .spicture {
@@ -321,23 +315,25 @@
     }
     .track {
         margin-top: 60px;
-        height: 300px;
+        height: max-content;
         width: 100vw;
         text-align: center;
     }
     .doc {
+        margin-bottom: 60px;
         transition-duration: 0.5s;
-        box-shadow: 0 30px 40px 0 rgba(0,0,0,0.2), 0 12px 40px 0 rgba(0,0,0,0.19);
-        height: 300px;
-        margin-top: 60px;
+        height: 200px;
+        margin-top: 45px;
     }
     .doc img {
+        transition: 0.3s all;
+        box-shadow: 0 30px 40px 0 rgba(0,0,0,0.2), 0 12px 40px 0 rgba(0,0,0,0.19);
+        height: 200px;
+        width: auto !important;
         cursor: pointer;
     }
-    .doc:hover {
-        overflow-x: hidden !important;
-        transition-duration: 0.5s;
-        height: 1653px;
+    .doc img:hover {
+        height: 190px;
     }
     .rpdiscp {
         grid-area: rpd;
@@ -368,7 +364,6 @@
         border: none;
         text-align: center;
         margin: 5px;
-        font-weight: 700;
         font-size: x-large;
         transition-duration: 0.1s;
         color: white;
@@ -421,8 +416,5 @@
             opacity: 1;
         }
     }
-    @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-    @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 }
 

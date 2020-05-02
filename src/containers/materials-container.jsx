@@ -19,6 +19,10 @@ export class MaterialsContainer extends React.Component {
         this.setNewTypesArray.bind(this);
     }
 
+    componentDidMount() {
+        window.document.title=local[localStorage.language].materials
+    }
+
 
     setNewTypesArray = (newArray) => {
         this.setState({
@@ -79,8 +83,8 @@ export class MaterialsContainer extends React.Component {
                                     <div className={s.wantThisButtonWrapper}>
                                         <a className={s.toContacts} key={index}
                                            style={{display: "inline-block"}}
-                                           href={`/${localStorage.language}/contacts/?material=${elem.fullName}`}>Write
-                                            us about this!
+                                           href={`/${localStorage.language}/contacts/?material=${elem.fullName}`}>
+                                            {local[localStorage.language].fast_feedback}
                                         </a>
                                     </div>
                                 </div>
